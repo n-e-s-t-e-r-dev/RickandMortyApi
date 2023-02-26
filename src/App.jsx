@@ -10,6 +10,16 @@ function App() {
         <img src={header} alt="" />
       </header>
       <RickAndMorthy />
+      <div className='burbujas'>
+        <div className='burbuja'></div>
+        <div className='burbuja'></div>
+        <div className='burbuja'></div>
+        <div className='burbuja'></div>
+        <div className='burbuja'></div>
+      </div>
+      <div className='meteoro-cont'>
+        <div className='meteoro'></div>
+      </div>
     </div>
   )
 }

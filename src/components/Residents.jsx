@@ -25,34 +25,45 @@ const Residents = ({ url }) => {
     bgStatus()
 
     return (
-        <div className='Padre'>
-            <div className='Hijo'>
-                <div className='Nieto'>
-                    <div className="Caracteristicas">
-                        <div className='Tipos'>
-                            <img src={resident.image} alt="" />
-                            <section>
-                                <h1>{resident.name}</h1>
-                                <p>Especie:</p>
-                                <h2> {resident.species} </h2>
-                            </section>
-                            <section>
-                                <p>Origen:</p>
-                                <h2> {resident.origin?.name} </h2>
-                            </section>
-                            <section>
-                                <p>Episodios:</p>
-                                <h2> {resident.episode?.length}   </h2>
-                            </section>
-                        </div>
+        <div className='Nieto'>
+            <div className="Caracteristicas">
+                <div className='Tipos'>
+                    <div className='div-container-img'>
+                        <img src={resident.image} alt="" />
                     </div>
-                    <div className='info_status'>
-                        <div className='status' style={{ backgroundColor: statusArray[0] }}></div>
-                        <p>{statusArray[1]}</p>
+                    <div className='div-sections-name'>
+                        <h1 style={{fontSize: 20}}>{resident.name}</h1>
+                        <section>
+                            <p>Episodios:</p>
+                            <h2> {resident.episode?.length}   </h2>
+                        </section>
                     </div>
+
+                    <div className='div-sections'>
+
+                        <section>
+
+                            <p>Especie:</p>
+                            <h2> {resident.species} </h2>
+                        </section>
+                        <section>
+                            <p>Origen:</p>
+                            <h2> {resident.origin?.name} </h2>
+                        </section>
+
+                    </div>
+
                 </div>
             </div>
+            <div className='prueba-status'>
+                <div className='info_status'>
+                    <div className='status' style={{ backgroundColor: statusArray[0] }}></div>
+                    <p>{statusArray[1]}</p>
+                </div>
+            </div>
+
         </div>
+
     );
 };
 
